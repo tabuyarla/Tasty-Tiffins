@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty Tiffins</title>
+    <style>
+        /* Body Styling */
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Navigation Bar */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            background-color: rgb(20, 20, 20);
+        }
+
+        li {
+            margin: 0 10px;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            background-color: transparent;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        li a:hover {
+            background-color: rgb(84, 62, 66);
+            transform: scale(1.1);
+        }
+
+        /* Header Animation */
+        h1 {
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 20px;
+        }
+
+        marquee {
+            font-size: 28px;
+            font-style: italic;
+            color: gold;
+        }
+
+        /* Content Section */
+        .content {
+            position: relative;
+            height: 700px;
+            padding: 80px;
+            color: white;
+            text-align: center;
+        }
+
+        .content::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("https://www.balcalnutrefy.com/wp-content/uploads/2023/02/Ragi-Idli-min.jpg");
+            background-position: center;
+            background-size: cover;
+            opacity: 0.4;
+            z-index: -1;
+        }
+
+        /* Word-by-Word Animation */
+        .content h1 span {
+            display: inline-block;
+            opacity: 0;
+            animation: fadeInWord 1.5s ease forwards;
+            font-size: 50px;
+            color: #ffcc00;
+        }
+
+        .content h1 span:nth-child(1) { animation-delay: 0s; }
+        .content h1 span:nth-child(2) { animation-delay: 0.5s; }
+        .content h1 span:nth-child(3) { animation-delay: 1s; }
+        .content h1 span:nth-child(4) { animation-delay: 1.5s; }
+
+        @keyframes fadeInWord {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Paragraph Styling */
+        .content p {
+            font-size: 20px;
+            line-height: 1.8;
+            margin: 20px auto;
+            max-width: 800px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        /* Button Styling */
+        .content a {
+            display: inline-block;
+            font-size: 18px;
+            background-color: red;
+            padding: 12px 25px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 1px solid red;
+            transition: all 0.3s ease;
+        }
+
+        .content a:hover {
+            background-color: white;
+            color: red;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <h1><em><marquee behavior="alternate">...Here We Go!!!</marquee></em></h1>
+
+    <!-- Navigation Bar -->
+    <ul>
+        <li><a class="active" href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Service</a></li>
+    </ul>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>
+            <span>Welcome</span>
+            <span>to</span>
+            <span>Tasty</span>
+            <span>Tiffins</span>
+        </h1>
+        <p>
+            The food we make is healthy and delicious. It is prepared with utmost care to ensure hygiene and quality.<br>
+            We promise, if you try our food once, you will keep coming back for more!
+        </p>
+        <div><a href="https://www.google.com/">Visit More</a></div>
+    </div>
+</body>
+</html>
